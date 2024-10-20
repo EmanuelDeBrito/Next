@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: 'Homepage'
+}
+
 const Page = () => {
   return(
     <div>
