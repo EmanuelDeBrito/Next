@@ -1,7 +1,11 @@
+import { Button } from "@/components/button";
+
 const Page = () => {
     return(
         <div>
-            Página de SIGNIN
+            <h1>Página de SIGNIN</h1>
+
+            <Button />
         </div>
     )
 }

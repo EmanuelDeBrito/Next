@@ -35,7 +35,7 @@ export const generateStaticParams = async () => {
 
     return posts.map(post => (
         {
-            postId: post.id
+            postId: post.id.toString()
         }
     ))
 }

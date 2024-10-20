@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 const metadata: Metadata = {
   title: 'Homepage'
@@ -7,7 +8,9 @@ const metadata: Metadata = {
 const Page = () => {
   return(
     <div>
-      Página Inicial
+      <h1>Página Inicial</h1>
+
+      <Link href={'/sobre'}>Ir para página sobre</Link>
     </div>
   )
 }
