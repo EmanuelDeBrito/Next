@@ -29,4 +29,15 @@ const Page = async ({ params }: Props) => {
     )
 }
 
+export const generateStaticParams = async () => {
+    const request = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const posts: Post[] = await request.json();
+
+    return posts.map(post => (
+        {
+            postId: post.id
+        }
+    ))
+}
+
 export default Page;
