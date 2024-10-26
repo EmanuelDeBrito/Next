@@ -1,5 +1,6 @@
 "use client"
 
+import { getPosts } from "@/actions/get-posts";
 import { Post } from "@/types/post";
 import { useState } from "react";
 
@@ -10,10 +11,9 @@ export const PostClientComponent = () => {
 
     const handleTakePosts = async () => {
         setLoading(true);
-        const request = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const posts: Post[] = await request.json();
+        const data = await getPosts();
         setLoading(false);
-        setPosts(posts);
+        setPosts(data);
     }   
 
     return(
